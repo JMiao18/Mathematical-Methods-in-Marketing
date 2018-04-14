@@ -1,0 +1,127 @@
+﻿\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{mathtools}
+\usepackage{bbm}
+\usepackage{relsize}
+\usepackage{comment}
+\usepackage{bm}
+\usepackage{mathtools}
+\usepackage{setspace}
+\usepackage{hyperref}
+\usepackage{biblatex}
+\addbibresource{cite.bib}
+%Includes "References" in the table of contents
+\usepackage[nottoc]{tocbibind}
+\title{Fake Negative Review on Taobao}
+\author{Jin Miao}
+
+\begin{document}
+
+\maketitle
+\doublespace
+\section{Introduction}
+
+Models for online reviews do not consider consumers’ reaction to fake reviews.
+
+Online review is crucial for Taobao (\url{https://www.taobao.com/}) both from the perspectives of buyers and sellers. In addition to giving ratings based on a predetermined scale, reviewers are often requested to upload relevant photos and provide detailed comments on their experience. Objective reviews can help consumers alleviate asymmetric information. For sellers, online reviews are a non-trivial factor for sales and revenue throughout the process of marketing processes. Positive feedback is one determinant for ranking sellers on Taobao's organic search pages for keywords. In addition, reviews will influence conversion rate and the consumers' attitudes towards the product. 
+
+Emerging markets provide valuable opportunities for marketing research. The market environments are different from developed countries, which leads to different behavioral patterns. With respects to online review, lack of regulations and weak enforcement of laws in China lead to distortions in markets outcomes \cite{Narasimhan2015}. Taking advantage of the fact that consumers rely on reviews to make decisions, a large number of sellers created fake sales record to gain popularity. Even though the past decade has witnessed the rapid development of Internet shopping, fake online reviews have become an increasingly severe problem in China. For example, on March 15th 2016, which was the Day for Protecting Consumers' Rights in China, China Central Television (CCTV) uncovered that more than one million people were in the industry of creating fake online review \cite{taobao}. As cheap as 1000 RMB (160 USD), one seller can purchase more than 200 sales record with ``all-star" ratings with reviews teeming with compliments. The market were so distorted that without buying fake positive reviews, honest sellers were very difficult to compete with cheaters. 
+
+Obviously, such ``professional" services to create fake popularity are intolerable for Taobao, who aims at becoming an ecosystem for online transactions. More than 300 algorithms have been developed to detect fraudulent transactions and delete fake reviews. In addition, the punishment for sellers to generate fake reviews has been increasingly heavy on Taobao \cite{maijia}. However, this underground industry persists and develops its anti-detection abilities. For example, after Taobao used the logistic history to decide fake reviews, some cheaters deployed the trick of sending empty packages in order to escape punishment. 
+
+One possible reason for fake reviews on Taobao is its rule for online reviews. After submitting their reviews, customers have fifteen days to communicate or negotiate with sellers for their reviews. In order to get higher ratings, sellers usually promise customers with monetary rewards in exchange for improving their ratings. While both Amazon and Taobao strictly prohibits the behavior of promising a refund in exchange of posting positive reviews \cite{taobao,amazon}, this problem is particularly serious on Taobao because of this period of negotiations. As a consequence, on the five-point Likert scale, the average ratings for a majority of keywords are higher than 4.5 and many shops have ratings close to perfection. 
+
+Fake reviews increase consumer uncertainty. Experienced buyers are fully aware of the credibility of online reviews and may conjecture that a good proportion of positive reviews are fake. Another source of uncertainty comes from information cascade. If the buyers do not pay much attention on commenting on goods, their ratings and reviews are likely to be affected by the online reviews in the past. 
+
+In order to manipulate reviews and gain market shares, some sellers posted false negative reviews for their competitors. Given that past reviews are one of the determinants for organic keyword searches on Taobao, fake reviews from competitors will possibly negatively affect the ranking on the result page. The higher one good is located on the result page, the more clicks the shop will collect within a given window. Negative reviews also will take effect when consumers choose among several products. Negative reviews will lower the mean for the competitor's good will reduce the attractiveness of the competitors' products. Another channel for gaining market shares is the increased variance for the competitors' products, which reduced the utility for risk-averse consumers. From the perspective of information cascade, the distribution of reviews will impact the generation of sequential reviews due to psychological conformity or asymmetric information. These theoretical predictions are consistent with observations in the industry. There are many examples of deliberately negative reviews on Taobao and some of them were even generated by organized ``professional" teams \cite{sina}.
+
+\subsection{Literature Review} \label{lit}
+
+User-generated online reviews have been continuously gaining credibility in the eyes of consumers, and today they are an essential component of the consumer decision-making process. User-generated online reviews have non-negligible economic values (Wu et al., 2015) \cite{Wu2015} and interacted with management responses (Proserpio \& Zervas, 2017) \cite{Proserpio2017}. Wu et al. (2015) \cite{Wu2015} studies how consumers learn, from reading online reviews, the quality and cost of restaurant dining. Based on structural learning models and a series of counterfactural experiments, consumers learned the distribution of quality and costs summarized by the mean and variance across consumer population. However, this model does not account for review credibility directly. Instead, the authors assume that the perceived accuracy of a review is determined by the page on which the review is displayed and the order in which the review is displayed on a page. More importantly, Wu et al (2015) \cite{Wu2015} focuses on experiential services in the restaurant, which are much more heterogeneous than keyword searches for products on Taobao. Proserpio \& Zervas (2017) \cite{Proserpio2017} is one of the few studies that pay attention to negative reviews, which demonstrates the relationship between management responses and online reputations. The authors found that hotels received fewer but longer negative reviews that could not be deleted when hotels began to response. On Taobao, in addition to ratings from buyers, sellers' reviews are mandatory for a valid response. Proserpio \& Zervas (2017) \cite{Proserpio2017} implies that response from the seller side could be used to deal with false negative reviews from competitors. This study is consistent with the high satisfaction rates on Taobao if we incorporate post-purchase communications with customers into active management responses. 
+
+Accordingly, there has been growing concern about the potential for posting deceptive opinion spam—fictitious reviews that have been deliberately written to sound authentic. With respects to fake reviews, computer scientists focused on detection techniques (Mukherjee et al., 2012 \cite{Mukherjee2012}; Ott et al., 2012\cite{Ott2012}) especially in the domain of false positive reviews. Zhao et al. (2013) \cite{Zhao2013} modelled how consumers learn online product reviews especially in the domain of experiential products. Their model predicted that when consumers were uncertain and suspicious about online reviews, the effects of higher means and more popularity on sales were reduced. Taking into consideration the sequential and temporal dynamics of online opinion (Godes & Silva, 2012 \cite{Godes2012}), fake negative reviews will take effects when subsequent consumers evaluate the products and services. 
+
+This paper aims at building analytic models to explore the effects of false negative reviews on consumer decision making. The rest of the paper is organized in several parts. In §\hyperref[model]{2}, I present the model on fake negative reviews covering organic search ranking and consumer choice decision. I conclude the proposal in §\hyperref[future]{3} and suggest directions for future research. 
+
+\section{Model Construction} \label{model}
+
+\subsection{Modelling Organic Search Ranking}
+
+When consumers browse the shopping website for some products with keywords, the ranking on the result page for a specific keyword is defined as $R = (R_1, R_2, ..., R_n)$. To simplify the model, I assume that for each product $j$, the ranking algorithm considers total sales ($N_j$), the mean ratings ($\mu_j$) and other covariates (X) such that 
+\begin{equation}
+    r_j = \beta_1 N_j + \beta_2 \mu_j + \alpha X
+    \quad \forall R_i, R_j \in R, R_i \succ R_j \Longleftrightarrow r_i > r_j
+\end{equation}
+
+Given that different positions have different click-through rates, the click-through rates $CT_j$ are a parsimonious function of $R_j$ such that for a parsimonious function $\phi$
+\begin{equation}
+    CT_j = \phi(R_j)
+    \text{ where }
+    R_{+}\xrightarrow{\phi}R_{+}
+\end{equation}
+
+\subsection{Modelling Consumer Choice Decisions}
+
+My model is built on and adapted from Wu et al. (2015) \cite{Wu2015}.  
+For the browsing session of the user $i$, the user has a choice set $S_{i}$. For each good $j \in S_{i}$, there are multiple attributes, represented by a vector variable $A_{ij}$ that will influence consumers' choice utility. In this setting, $A_{ij}$ includes the quality $Q_{ij}$ and the cost $C_{ij}$. These attributes are individual-specific with a prior expectation $E(A_{ij})$ and a prior uncertainty $Var(A_{ij})$. For each product $j$ in the choice set $S_{i}$, the user reads $K_j$ reviews and altogether $K = \sum_{j\in{S_i}} K_j$ reviews. The information set $I_k$ is based on all the K reviews.   
+
+The expected utility function for individual i to choose product j is specified with Multinomial Logit Model. More specifically, 
+
+\begin{equation}
+E[U_{ij}|I_k] = \alpha_{ij} + w^Q_i {E[Q_{ij}|I_K] + \gamma^Q_i E[Q^2_{ij}|I_K]} + w^C_i {E[C_{ij}|I_K] + \epsilon_{ij}
+\end{equation}
+
+Where $\alpha_{ij}$ measures the user’s intrinsic preference for the restaurant; w^Q_i and w^C_i represent the utility weights of quality and cost; and Q_{ij} is the risk preference for quality. 
+
+The reviewer’s consumption experience of the attribute, A_{ij}, is assumed to be 
+\begin{equation}
+A_{ij} = A_j + \catchy_{kj}
+\end{equation}
+Where $A_j$ is the mean consumption experience across all consumers and $\catchy_{kj}$ is a stochastic component with a variance $\sigma^2_{\catchy,j}$.
+
+Assume that for an attribute A, reviewer k reports k evaluations, $R_{kj} = { R_{kj}^1, R_{kj}^2, R_{kj}^3, …, R_{kj}^L }$ such that the relationship between the review evaluation and $A_{kj}$ is 
+
+\begin{equation}
+R_{kj} = A_{kj} e_{L} + \epsilon_{kj}
+\end{equation}
+Where $ e_{L} $ is a vector with every element being 1. 
+
+Wu et al. (2015) \cite{2015} proposes the differentiated learning model where a user learns about an individual-specific consumption experience, $A_{ij}$, based on her perceived taste correlations with the reviewers \cite{Wu2015}. More specifically, the consumer may put more weights on some reviews than the others because the user may consider the reviewer’s evaluations to have less noise reflecting the true consumption experiences. This model assumes that the random error $\epsilon_{ij}$ follows a normal distribution
+
+\begin{equation}
+\epsilon_{ij} ~ N(0, \lambda_k^{-1} \Omega \sigma^2_{\catchy,j})
+\end{equation}
+
+Where $\lambda_k$ captures the accuracy with higher $\lambda_k$ implying that the evaluation is more accurate. To identify $\lambda_k$, the authors use to objective variables that relate to where the review is posted. While review positions are proper proxies for accuracy, this identification ignores the effects of consumers’ subjective judgment of review authenticity. In addition, the scalar $\lambda_k$ is identical foa all individuals. Define the variable $pos_k$ as an indicator of review k to be positive. Then the accuracy $\lambda_k$ can be modelled as
+
+\begin{equation}
+\lambda_k = exp(p^{pos_k} Z_k \alpha^K)
+\end{equation}
+
+Where $\alpha$ captures the effects of which page the review is displayed; $Z$ captures the order of the review on a page; $p$ represents consumers’ subjective evaluation of how credible the positive review is. 
+
+\subsection{Sequential Dynamics of Fake Reviews}
+Studies on online review from the past literature treat the browsing history as exogenous. However, the result for keyword search on Taobao is determined by past reviews, which justifies extending the model to incorporate sequential dynamics of fake reviews. In this way, this model can predict the effects of fake reviews over a long period of time. 
+
+Based on informational cascade, I assume that the consumers’ evaluations for products are a weighted average of her utility from attributes, the mean and variance of past reviews. This model captures the effects of fake negative reviews on opinion generation, which in turn affects the ranking of goods on the sequential result pages for keyword searches. 
+
+\section{Future Direction} \label{future}
+There are two main challenges for model identification. The first problem is to distinguish false negative reviews from real negative reviews. There are many reasons for online sellers to receive negative reviews. Based on Law of Large Numbers, when market shares are large enough, it is necessary to manage negative reviews from a specific customer group. From the perspective of competitors, they also have the incentives to hide their true purpose to influence consumers' decision-making. In other words, if consumers can identify fake negative reviews, then these reviews cannot help competitors gain market shares. 
+
+
+Currently, I assume that this authenticity index for positive reviews is the same for all individuals. However, $p_1$ may depend on experiences and socioeconomic status. 
+
+Retaliation [Game Theory Perspective]
+Will consumers also find that some negative reviews are fake?
+Regulations and punishments (Risk for firms)
+Detections
+
+
+\medskip
+%Sets the bibliography style to UNSRT and imports the 
+%bibliography file "samples.bib".
+\printbibliography
+
+\end{document}
+
